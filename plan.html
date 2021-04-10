@@ -20,217 +20,156 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <style>
-        
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	background: #875A7B;
+  background: #F2F2F2;
+  padding: 0;
+  maring: 0;
 }
 
-#plans,#plans ul,#plans ul li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+#price {
+  text-align: center;
 }
 
-#pricePlans:after {
-	content: '';
-	display: table;
-	clear: both;
+.plan {
+  display: inline-block;
+  margin: 10px 1%;
+  font-family: 'Lato', Arial, sans-serif;
 }
 
-#pricePlans {
-	zoom: 1;
+.plan-inner {
+  background: #fff;
+  margin: 0 auto;
+  min-width: 280px;
+  max-width: 100%;
+  position:relative;
 }
 
-#pricePlans {
-	max-width: 69em;
-	margin: 0 auto;
+.entry-title {
+  background: #53CFE9;
+  height: 140px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
 }
 
-#pricePlans #plans .plan {
-	background: #fff;
-	float: left;
-	width: 100%;
-	text-align: center;
-	border-radius: 5px;
-	margin: 0 0 20px 0;
-
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+.entry-title>h3 {
+  background: #20BADA;
+  font-size: 20px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
 }
 
-.planContainer .title h2 {
-	font-size: 2.125em;
-	font-weight: 300;
-	color: #3e4f6a;
-	margin: 0;
-	padding: .6em 0;
+.entry-title .price {
+  position: absolute;
+  bottom: -25px;
+  background: #20BADA;
+  height: 95px;
+  width: 95px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  line-height: 80px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.planContainer .title h2.bestPlanTitle {
-	background: #F9F9F9;
-
-	background: -webkit-linear-gradient(top, #475975, #364761);
-	background: -moz-linear-gradient(top, #475975, #364761);
-	background: -o-linear-gradient(top, #475975, #364761);
-	background: -ms-linear-gradient(top, #475975, #364761);
-	background: linear-gradient(top, #475975, #364761);
-	color: #fff;
-	border-radius: 5px 5px 0 0;
+.price span {
+  position: absolute;
+  font-size: 9px;
+  bottom: -10px;
+  left: 30px;
+  font-weight: 400;
 }
 
-
-.planContainer .price p {
-	background: #3e4f6a;
-
-	background: -webkit-linear-gradient(top, #475975, #364761);
-	background: -moz-linear-gradient(top, #475975, #364761);
-	background: -o-linear-gradient(top, #475975, #364761);
-	background: -ms-linear-gradient(top, #475975, #364761);
-	background: linear-gradient(top, #475975, #364761);
-	color: #fff;
-	font-size: 1.2em;
-	font-weight: 700;
-	height: 2.6em;
-	line-height: 2.6em;
-	margin: 0 0 1em;
+.entry-content {
+  color: #323232;
 }
 
-.planContainer .price p.bestPlanPrice {
-	background: #f7814d;
+.entry-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
 
-.planContainer .price p span {
-	color: #8394ae;
+.entry-content li {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 10px 0;
 }
 
-.planContainer .options {
-	margin-top: 10em;
+.entry-content li:last-child {
+  border: none;
 }
 
-.planContainer .options li {
-	font-weight: 700;
-	color: #364762;
-	line-height: 2.5;
+.btn {
+  padding: 3em 0;
+  text-align: center;
 }
 
-.planContainer .options li span {
-	font-weight: 400;
-	color: #979797;
+.btn a {
+  background: #323232;
+  padding: 10px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none
+}
+.hot {
+    position: absolute;
+    top: -7px;
+    background: #F80;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+    padding: 2px 5px;
+    font-size: 9px;
+    border-radius: 2px;
+    right: 10px;
+    font-weight: 700;
+}
+.basic .entry-title {
+  background: #75DDD9;
 }
 
-.planContainer .button a {
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #3e4f6a;
-	font-weight: 700;
-	letter-spacing: 3px;
-	line-height: 2.8em;
-	border: 2px solid #3e4f6a;
-	display: inline-block;
-	width: 80%;
-	height: 2.8em;
-	border-radius: 4px;
-	margin: 1.5em 0 1.8em;
+.basic .entry-title > h3 {
+  background: #44CBC6;
 }
 
-.planContainer .button a.bestPlanButton {
-	color: #fff;
-	background: #f7814d;
-	border: 2px solid #f7814d;
+.basic .price {
+  background: #44CBC6;
 }
 
-#credits {
-	text-align: center;
-	font-size: .8em;
-	font-style: italic;
-	color: #777;
+.standard .entry-title {
+  background: #4484c1;
 }
 
-#credits a {
-	color: #333;
+.standard .entry-title > h3 {
+  background: #3772aa;
 }
 
-#credits a:hover {
-	text-decoration: none;
+.standard .price {
+  background: #3772aa;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-
-#pricePlans #plans .plan {
-	width: 49%;
-	margin: 0 2% 20px 0;
+.ultimite .entry-title > h3 {
+  background: #DD4B5E;
 }
 
-#pricePlans #plans > li:nth-child(2n) {
-	margin-right: 0;
+.ultimite .entry-title {
+  background: #F75C70;
 }
 
+.ultimite .price {
+  background: #DD4B5E;
 }
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-#pricePlans #plans .plan {
-	width: 49%;
-	margin: 0 2% 20px 0;
-}
-
-#pricePlans #plans > li:nth-child(2n) {
-	margin-right: 0;
-}
-
-}
-
-@media screen and (min-width: 1025px) {
-
-#pricePlans {
-	margin: 2em auto;
-}
-
-#pricePlans #plans .plan {
-	width: 24%;
-	margin: 0 1.33% 20px 0;
-
-	-webkit-transition: all .25s;
-	   -moz-transition: all .25s;
-	    -ms-transition: all .25s;
-	     -o-transition: all .25s;
-	        transition: all .25s;
-}
-
-#pricePlans #plans > li:last-child {
-	margin-right: 0;
-}
-
-#pricePlans #plans .plan:hover {
-	-webkit-transform: scale(1.04);
-	   -moz-transform: scale(1.04);
-	    -ms-transform: scale(1.04);
-	     -o-transform: scale(1.04);
-	        transform: scale(1.04);
-}
-
-.planContainer .button a {
-	-webkit-transition: all .25s;
-	   -moz-transition: all .25s;
-	    -ms-transition: all .25s;
-	     -o-transition: all .25s;
-	        transition: all .25s;
-}
-
-.planContainer .button a:hover {
-	background: #3e4f6a;
-	color: #fff;
-}
-
-.planContainer .button a.bestPlanButton:hover {
-	background: #ff9c70;
-	border: 2px solid #ff9c70;
-}
-
-}
-
     </style>
     
 
@@ -320,79 +259,101 @@ body {
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-          
-	<section id="pricePlans">
-		<ul id="plans">
-			<li class="plan">
-				<ul class="planContainer">
-					<li class="title"><h2>PLAN 1</h2></li>
-					<li class="price"><p  class="bestPlanPrice">Rs.300</p></li>
-					<li>
-						<ul class="options">
-							<li>1x <span>option1</span></li>
-							<li>Odoo <span>option2</span></li>
-							<li>Unlimited <span>option 3</span></li>
-							<li>Unlimited <span>option 4</span></li>
-							<li>1x <span>option 5</span></li>
-						</ul>
-					</li>
-					<li class="button"><a class="bestPlanButton" href="#">ORDER NOW</a></li>
-				</ul>
-			</li>
-
-			<li class="plan">
-				<ul class="planContainer">
-					<li class="title"><h2>PLAN 2</h2></li>
-					<li class="price"><p class="bestPlanPrice">Rs.500</p></li>
-					<li>
-						<ul class="options">
-							<li>2x <span>option 1</span></li>
-							<li>Free <span>option 2</span></li>
-							<li>Unlimited <span>option 3</span></li>
-							<li>Unlimited <span>option 4</span></li>
-							<li>2x <span>option 5</span></li>
-						</ul>
-					</li>
-					<li class="button"><a class="bestPlanButton" href="#">ORDER NOW</a></li>
-				</ul>
-			</li>
-
-			<li class="plan">
-				<ul class="planContainer">
-					<li class="title"><h2>PLAN 3</h2></li>
-					<li class="price"><p class="bestPlanPrice">Rs.700</p></li>
-					<li>
-						<ul class="options">
-							<li>2x <span>option 1</span></li>
-							<li>Free <span>option 2</span></li>
-							<li>Unlimited <span>option 3</span></li>
-							<li>Unlimited <span>option 4</span></li>
-							<li>3x <span>option 5</span></li>
-						</ul>
-					</li>
-					<li class="button"><a class="bestPlanButton" href="#">ORDER NOW</a></li>
-				</ul>
-			</li>
-
-			<li class="plan">
-				<ul class="planContainer">
-					<li class="title"><h2>PLAN 4</h2></li>
-					<li class="price"><p class="bestPlanPrice">Rs.1000</p></li>
-					<li>
-						<ul class="options">
-							<li>2x <span>option 1</span></li>
-							<li>Free <span>option 2</span></li>
-							<li>Unlimited <span>option 3</span></li>
-							<li>Unlimited <span>option 4</span></li>
-							<li>5x <span>option 5</span></li>
-						</ul>
-					</li>
-					<li class="button"><a class="bestPlanButton" href="#">ORDER NOW</a></li>
-				</ul>
-			</li>
-		</ul> <!-- End ul#plans -->
-	</section>
-
+                <div id="price">
+                    <!--price tab-->
+                    <div class="plan">
+                      <div class="plan-inner">
+                        <div class="entry-title">
+                          <h3>Basic Wash</h3>
+                          <div class="price">$25<span>/PER CAR</span>
+                          </div>
+                        </div>
+                        <div class="entry-content">
+                          <ul>
+                            <li><strong>1x</strong> option 1</li>
+                            <li><strong>2x</strong> option 2</li>
+                            <li><strong>3x</strong> option 3</li>
+                            <li><strong>Free</strong> option 4</li>
+                            <li><strong>Unlimited</strong> option 5</li>
+                          </ul>
+                        </div>
+                        <div class="btn">
+                          <a href="#">Order Now</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of price tab-->
+                    <!--price tab-->
+                    <div class="plan basic">
+                      <div class="plan-inner">
+                        <div class="hot">hot</div>
+                        <div class="entry-title">
+                          <h3>Express Wash</h3>
+                          <div class="price">$50<span>/PER CAR</span>
+                          </div>
+                        </div>
+                        <div class="entry-content">
+                          <ul>
+                            <li><strong>1x</strong> option 1</li>
+                            <li><strong>2x</strong> option 2</li>
+                            <li><strong>3x</strong> option 3</li>
+                            <li><strong>Free</strong> option 4</li>
+                            <li><strong>Unlimited</strong> option 5</li>
+                          </ul>
+                        </div>
+                        <div class="btn">
+                          <a href="#">Order Now</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of price tab-->
+                    <!--price tab-->
+                    <div class="plan standard">
+                      <div class="plan-inner">
+                        <div class="entry-title">
+                          <h3>Super Wash</h3>
+                          <div class="price">$75<span>/PER CAR</span>
+                          </div>
+                        </div>
+                        <div class="entry-content">
+                          <ul>
+                            <li><strong>2x</strong> Free Entrance</li>
+                            <li><strong>Free</strong> Snacks</li>
+                            <li><strong>Custom</strong> Swags</li>
+                            <li><strong>2x</strong> Certificate</li>
+                            <li><strong>Free</strong> Wifi</li>
+                          </ul>
+                        </div>
+                        <div class="btn">
+                          <a href="#">Order Now</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of price tab-->
+                    <!--price tab-->
+                    <div class="plan ultimite">
+                      <div class="plan-inner">
+                        <div class="entry-title">
+                          <h3>Unlimited Wash</h3>
+                          <div class="price">$100<span>/PER CAR</span>
+                          </div>
+                        </div>
+                        <div class="entry-content">
+                          <ul>
+                            <li><strong>1x</strong> option 1</li>
+                            <li><strong>2x</strong> option 2</li>
+                            <li><strong>3x</strong> option 3</li>
+                            <li><strong>Free</strong> option 4</li>
+                            <li><strong>Unlimited</strong> option 5</li>
+                          </ul>
+                        </div>
+                        <div class="btn">
+                          <a href="#">Order Now</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of price tab-->
+                  </div>
                
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
