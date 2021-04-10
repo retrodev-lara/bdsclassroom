@@ -20,132 +20,217 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <style>
-        body {
-  font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #404040;
-  background: #eeebe4;
+        
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #875A7B;
 }
 
-.plans {
-  width: 836px;
-  margin: 50px auto;
-  overflow: hidden;
+#plans,#plans ul,#plans ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.plan {
-  float: left;
-  width: 150px;
-  margin: 20px 2px;
-  padding: 15px 25px;
-  text-align: center;
-  background: white;
-  background-clip: padding-box;
-  border: 2px solid #e5ded6;
-  border-color: rgba(black, .1);
-  border-radius: 5px;
+#pricePlans:after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
-.plan-title {
-  margin-bottom: 12px;
-  font-size: 24px;
-  color: #36bce6;
+#pricePlans {
+	zoom: 1;
 }
 
-.plan-price {
-  margin-bottom: 20px;
-  line-height: 1;
-  font-size: 28px;
-  font-weight: bold;
-  color: #fd935a;
+#pricePlans {
+	max-width: 69em;
+	margin: 0 auto;
 }
 
-.plan-unit {
-  display: block;
-  margin-top: 5px;
-  font-size: 13px;
-  font-weight: normal;
-  color: #aaa;
+#pricePlans #plans .plan {
+	background: #fff;
+	float: left;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+	margin: 0 0 20px 0;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.plan-features {
-  width: 120px;
-  margin: 20px auto 15px;
-  padding: 15px 0 0 15px;
-  border-top: 1px solid #e5ded6;
-  text-align: left;
+.planContainer .title h2 {
+	font-size: 2.125em;
+	font-weight: 300;
+	color: #3e4f6a;
+	margin: 0;
+	padding: .6em 0;
 }
 
-.plan-feature {
-  line-height: 20px;
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
+.planContainer .title h2.bestPlanTitle {
+	background: #F9F9F9;
 
-  & + & { margin-top: 5px; }
+	background: -webkit-linear-gradient(top, #475975, #364761);
+	background: -moz-linear-gradient(top, #475975, #364761);
+	background: -o-linear-gradient(top, #475975, #364761);
+	background: -ms-linear-gradient(top, #475975, #364761);
+	background: linear-gradient(top, #475975, #364761);
+	color: #fff;
+	border-radius: 5px 5px 0 0;
 }
 
-.plan-feature-unit {
-  margin-left: 2px;
-  font-size: 16px;
+
+.planContainer .price p {
+	background: #3e4f6a;
+
+	background: -webkit-linear-gradient(top, #475975, #364761);
+	background: -moz-linear-gradient(top, #475975, #364761);
+	background: -o-linear-gradient(top, #475975, #364761);
+	background: -ms-linear-gradient(top, #475975, #364761);
+	background: linear-gradient(top, #475975, #364761);
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 700;
+	height: 2.6em;
+	line-height: 2.6em;
+	margin: 0 0 1em;
 }
 
-.plan-feature-name {
-  font-size: 13px;
-  font-weight: normal;
-  color: #aaa;
+.planContainer .price p.bestPlanPrice {
+	background: #f7814d;
 }
 
-.plan-button {
-  position: relative;
-  display: block;
-  line-height: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(black, .1);
-  background: #fd935c;
-  border-bottom: 2px solid #cf7e3b;
-  border-color: rgba(black, .15);
-  border-radius: 4px;
-
-  &:active {
-    top: 2px;
-    margin-bottom: 2px;
-    border-bottom: 0;
-  }
+.planContainer .price p span {
+	color: #8394ae;
 }
 
-.plan-highlight {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 170px;
-  border: 4px solid #37bbe6;
-
-  .plan-button {
-    font-size: 18px;
-    line-height: 49px;
-    background: #37bce5;
-    border-color: #3996b3;
-    border-color: rgba(black, .15);
-  }
+.planContainer .options {
+	margin-top: 10em;
 }
 
-.plan-recommended {
-  width: 160px;
-  margin: -15px auto 15px;
-  padding-bottom: 2px;
-  line-height: 22px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 1px rgba(black, .05);
-  background: #37bbe6;
-  border-radius: 0 0 4px 4px;
+.planContainer .options li {
+	font-weight: 700;
+	color: #364762;
+	line-height: 2.5;
 }
+
+.planContainer .options li span {
+	font-weight: 400;
+	color: #979797;
+}
+
+.planContainer .button a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #3e4f6a;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 2.8em;
+	border: 2px solid #3e4f6a;
+	display: inline-block;
+	width: 80%;
+	height: 2.8em;
+	border-radius: 4px;
+	margin: 1.5em 0 1.8em;
+}
+
+.planContainer .button a.bestPlanButton {
+	color: #fff;
+	background: #f7814d;
+	border: 2px solid #f7814d;
+}
+
+#credits {
+	text-align: center;
+	font-size: .8em;
+	font-style: italic;
+	color: #777;
+}
+
+#credits a {
+	color: #333;
+}
+
+#credits a:hover {
+	text-decoration: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+#pricePlans #plans .plan {
+	width: 49%;
+	margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+	margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+#pricePlans #plans .plan {
+	width: 49%;
+	margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+	margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 1025px) {
+
+#pricePlans {
+	margin: 2em auto;
+}
+
+#pricePlans #plans .plan {
+	width: 24%;
+	margin: 0 1.33% 20px 0;
+
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+#pricePlans #plans > li:last-child {
+	margin-right: 0;
+}
+
+#pricePlans #plans .plan:hover {
+	-webkit-transform: scale(1.04);
+	   -moz-transform: scale(1.04);
+	    -ms-transform: scale(1.04);
+	     -o-transform: scale(1.04);
+	        transform: scale(1.04);
+}
+
+.planContainer .button a {
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+.planContainer .button a:hover {
+	background: #3e4f6a;
+	color: #fff;
+}
+
+.planContainer .button a.bestPlanButton:hover {
+	background: #ff9c70;
+	border: 2px solid #ff9c70;
+}
+
+}
+
     </style>
     
 
@@ -237,51 +322,79 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="plans">
-                    <div class="plan">
-                      <h3 class="plan-title">Started</h3>
-                      <p class="plan-price">$19 <span class="plan-unit">per month</span></p>
-                      <ul class="plan-features">
-                        <li class="plan-feature">2 <span class="plan-feature-name">websites</span></li>
-                        <li class="plan-feature">5<span class="plan-feature-unit">GB</span> <span class="plan-feature-name">storage</span></li>
-                        <li class="plan-feature">3 <span class="plan-feature-name">users</span></li>
-                      </ul>
-                      <a href="#" class="plan-button">Choose Plan</a>
-                    </div>
-                    <div class="plan plan-highlight">
-                      <p class="plan-recommended">Recommended</p>
-                      <h3 class="plan-title">Team</h3>
-                      <p class="plan-price">$49 <span class="plan-unit">per month</span></p>
-                      <ul class="plan-features">
-                        <li class="plan-feature">5 <span class="plan-feature-name">websites</span></li>
-                        <li class="plan-feature">20<span class="plan-feature-unit">GB</span> <span class="plan-feature-name">storage</span></li>
-                        <li class="plan-feature">10 <span class="plan-feature-name">users</span></li>
-                      </ul>
-                      <a href="#" class="plan-button">Choose Plan</a>
-                    </div>
-                    <div class="plan">
-                      <h3 class="plan-title">Premium</h3>
-                      <p class="plan-price">$99 <span class="plan-unit">per month</span></p>
-                      <ul class="plan-features">
-                        <li class="plan-feature">20 <span class="plan-feature-name">websites</span></li>
-                        <li class="plan-feature">50<span class="plan-feature-unit">GB</span> <span class="plan-feature-name">storage</span></li>
-                        <li class="plan-feature">25 <span class="plan-feature-name">users</span></li>
-                      </ul>
-                      <a href="#" class="plan-button">Choose Plan</a>
-                    </div>
-                    <div class="plan">
-                      <h3 class="plan-title">Corporate</h3>
-                      <p class="plan-price">$249 <span class="plan-unit">per month</span></p>
-                      <ul class="plan-features">
-                        <li class="plan-feature">&infin; <span class="plan-feature-name">websites</span></li>
-                        <li class="plan-feature">200<span class="plan-feature-unit">GB</span> <span class="plan-feature-name">storage</span></li>
-                        <li class="plan-feature">&infin; <span class="plan-feature-name">users</span></li>
-                      </ul>
-                      <a href="#" class="plan-button">Choose Plan</a>
-                    </div>
-                  </div>
-                
-                 
+          
+	<section id="pricePlans">
+		<ul id="plans">
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2>Bundle 1</h2></li>
+					<li class="price"><p>$1500</p></li>
+					<li>
+						<ul class="options">
+							<li>1x <span>Installation</span></li>
+							<li>Odoo <span>documentation</span></li>
+							<li>Unlimited <span>option 3</span></li>
+							<li>Unlimited <span>option 4</span></li>
+							<li>1x <span>option 5</span></li>
+						</ul>
+					</li>
+					<li class="button"><a href="#">ORDER NOW</a></li>
+				</ul>
+			</li>
+
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2 class="bestPlanTitle">Bundle 2</h2></li>
+					<li class="price"><p class="bestPlanPrice">$3000</p></li>
+					<li>
+						<ul class="options">
+							<li>2x <span>option 1</span></li>
+							<li>Free <span>option 2</span></li>
+							<li>Unlimited <span>option 3</span></li>
+							<li>Unlimited <span>option 4</span></li>
+							<li>2x <span>option 5</span></li>
+						</ul>
+					</li>
+					<li class="button"><a class="bestPlanButton" href="#">ORDER NOW</a></li>
+				</ul>
+			</li>
+
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2>Bundle 3</h2></li>
+					<li class="price"><p>$4500</p></li>
+					<li>
+						<ul class="options">
+							<li>2x <span>option 1</span></li>
+							<li>Free <span>option 2</span></li>
+							<li>Unlimited <span>option 3</span></li>
+							<li>Unlimited <span>option 4</span></li>
+							<li>3x <span>option 5</span></li>
+						</ul>
+					</li>
+					<li class="button"><a href="#">ORDER NOW</a></li>
+				</ul>
+			</li>
+
+			<li class="plan">
+				<ul class="planContainer">
+					<li class="title"><h2>Bundle 4</h2></li>
+					<li class="price"><p>$10'000</p></li>
+					<li>
+						<ul class="options">
+							<li>2x <span>option 1</span></li>
+							<li>Free <span>option 2</span></li>
+							<li>Unlimited <span>option 3</span></li>
+							<li>Unlimited <span>option 4</span></li>
+							<li>5x <span>option 5</span></li>
+						</ul>
+					</li>
+					<li class="button"><a href="#">ORDER NOW</a></li>
+				</ul>
+			</li>
+		</ul> <!-- End ul#plans -->
+	</section>
+
                
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
