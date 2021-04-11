@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
 
 </head>
 
@@ -272,7 +273,24 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show" id="collapseCardExample">
                                     <div class="card-body">
+                                        <div class="row">
+                                              <div class=col-lg-6>
                                         
+                                        <video-js
+                                           id="vid1"
+                                           controls
+                                            preload="auto"
+                                            width="auto"
+                                            height="auto"
+                                             poster="https://vjs.zencdn.net/v/oceans.png">
+                                             <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                             <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                             <source src="https://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                                             <track kind="captions" src="../docs/examples/shared/example-captions.vtt" srclang="en" label="English">
+                                             <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                                        </video-js>
+                                    </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -405,7 +423,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
+    <script src="http://vjs.zencdn.net/7.10.2/video.min.js"></script>
+    <script>
+        var vid = document.getElementById('vid1');
+        var player = videojs(vid);
+      </script>
+    
 </body>
 
 </html>
